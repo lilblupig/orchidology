@@ -20,6 +20,14 @@
     src: url('../../../../../templates/lilblutemplate/fonts/Lexend-VariableFont_wght.ttf') format('truetype');
 }
 
+/* Variables*/
+$dark-green: #104911;
+$light-green: #548C2F;
+$grey:#8491A3;
+$seasalt: #F8F9FA;
+$dark-grey:#212529;
+
+
 body {
     font-family: 'Lexend', sans-serif;
     font-weight: 200;
@@ -32,24 +40,24 @@ a {
 
 /* Change colours of menu bar */
 div.menu {
-    background-color: #212529;
+    background-color: $dark-grey;
     span.name, span.arrow {
-        color: #F8F9FA;
+        color: $seasalt;
     }
 }
 
 /* Change colours of menu bar on hover */
 div.menu li:hover {
-    background-color: #8491A3;
+    background-color: $grey;
 }
 
 /* Change background colour of menu dropdowns */
 div.menu .dj-megamenu-clean li div.dj-subwrap .dj-subwrap-in {
-    background-color: #212529;
+    background-color: $dark-grey;
 }
 /* Change background colour of menu dropdowns on hover*/
 div.menu .dj-megamenu-clean li ul.dj-submenu > li:hover > a {
-    background: #8491A3;
+    background: $grey;
 }
 
 /* Change position of mobile menu toggle */
