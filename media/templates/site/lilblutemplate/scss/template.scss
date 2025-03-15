@@ -14,10 +14,19 @@
 
 
 //Your CSS Here
+@font-face {
+    font-family: 'Lexend';
+    font-weight: 100 900;
+    src: url('../../../../../templates/lilblutemplate/fonts/Lexend-VariableFont_wght.ttf') format('truetype');
+  }
 
+body {
+    font-family: 'Lexend', sans-serif;
+    font-weight: 200;
+}
 
 //Basic Responsive Images
-img{
+img {
     max-width: 100%;
     height: auto;
 }

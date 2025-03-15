@@ -14,6 +14,7 @@
 		<filename>joomla.asset.json</filename>
 		<filename>templateDetails.xml</filename>
 		<folder>html</folder>
+		<folder>fonts</folder>
 	</files>
 	<media destination="templates/site/lilblutemplate" folder="media">
 		<folder>js</folder>
