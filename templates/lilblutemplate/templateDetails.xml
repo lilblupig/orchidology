@@ -29,7 +29,6 @@
 		<position>search</position>
 		<position>breadcrumbs</position>
 		<position>menu</position>
-		<position>content-top</position>
 	</positions>
 	<languages folder="language">
 		<language tag="en-GB">en-GB/tpl_lilblutemplate.ini</language>
