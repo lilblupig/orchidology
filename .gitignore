@@ -1,12 +1,12 @@
 # Joomla core folders
-administrator/
-api/
-cache/
-cli/
-components/
-images/
-includes/
-installation/
+/administrator/
+/api/
+/cache/
+/cli/
+/components/
+/images/
+/includes/
+/installation/
 
 # Exclude en-GB folder contents except custom template files
 language/*
@@ -15,8 +15,8 @@ language/en-GB/*
 !language/en-GB/tpl_joomstarter.ini
 !language/en-GB/tpl_joomstarter.sys.ini
 
-layouts/
-libraries/
+/layouts/
+/libraries/
 
 # Exclude media folder contents except custom template files
 media/*
@@ -26,17 +26,17 @@ media/templates/*
 media/templates/site/*
 !media/templates/site/joomstarter/
 
-modules/
-plugins/
-templates/cassiopeia/
-templates/system/
-templates/index.html
-tmp/
+/modules/
+/plugins/
+/templates/cassiopeia/
+/templates/system/
+/templates/index.html
+/tmp/
 
 # Joomla core files
-configuration.php
-htaccess.txt
+/configuration.php
+/htaccess.txt
 /index.php
-LICENSE.txt
-robots.txt.dist
-web.config.txt
+/LICENSE.txt
+/robots.txt.dist
+/web.config.txt
