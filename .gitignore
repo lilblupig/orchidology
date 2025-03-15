@@ -12,8 +12,8 @@
 language/*
 !language/en-GB/
 language/en-GB/*
-!language/en-GB/tpl_joomstarter.ini
-!language/en-GB/tpl_joomstarter.sys.ini
+!language/en-GB/tpl_lilblutemplate.ini
+!language/en-GB/tpl_lilblutemplate.sys.ini
 
 /layouts/
 /libraries/
@@ -24,7 +24,7 @@ media/*
 media/templates/*
 !media/templates/site/
 media/templates/site/*
-!media/templates/site/joomstarter/
+!media/templates/site/lilblutemplate/
 
 /modules/
 /plugins/
