@@ -18,17 +18,41 @@
     font-family: 'Lexend';
     font-weight: 100 900;
     src: url('../../../../../templates/lilblutemplate/fonts/Lexend-VariableFont_wght.ttf') format('truetype');
-  }
+}
 
 body {
     font-family: 'Lexend', sans-serif;
     font-weight: 200;
 }
 
+/* Force long urls to wrap, preventing overflow on small devices. */
 a {
-    overflow-wrap: break-word; /* Force long urls to wrap, preventing overflow on small devices. */
+    overflow-wrap: break-word;
 }
 
+/* Change colours of menu bar */
+div.menu {
+    background-color: #212529;
+    span.name, span.arrow {
+        color: #F8F9FA;
+    }
+}
+
+/* Change colours of menu bar on hover */
+div.menu li:hover {
+    background-color: #8491A3;
+}
+
+/* Change background colour of menu dropdowns */
+div.menu .dj-megamenu-clean li div.dj-subwrap .dj-subwrap-in {
+    background-color: #212529;
+}
+/* Change background colour of menu dropdowns on hover*/
+div.menu .dj-megamenu-clean li ul.dj-submenu > li:hover > a {
+    background: #8491A3;
+}
+
+/* Change position of mobile menu toggle */
 div.dj-megamenu-offcanvas {
     position: fixed;
     top: 0.5rem;
