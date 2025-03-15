@@ -25,6 +25,16 @@ body {
     font-weight: 200;
 }
 
+a {
+    overflow-wrap: break-word; /* Force long urls to wrap, preventing overflow on small devices. */
+}
+
+div.dj-megamenu-offcanvas {
+    position: fixed;
+    top: 0.5rem;
+    right: 0.5rem;
+}
+
 //Basic Responsive Images
 img {
     max-width: 100%;
