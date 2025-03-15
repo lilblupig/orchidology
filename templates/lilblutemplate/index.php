@@ -83,22 +83,15 @@ $this->setMetaData('viewport', 'width=device-width, initial-scale=1');
 <body class="site <?php echo $pageclass; ?>" data-bs-theme="light">
 
 	<header>
-        <?php // Generate a Bootstrap Navbar for the top of our website and put the site title on it ?>
-        <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
-            <div class="container">
-                <a href="" class="navbar-brand"><?php echo ($sitename); ?></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainmenu" aria-controls="mainmenu" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-                </button>
-                <?php // Put menu links in the navbar - main menu must be in the "menu" position!!! Only supports top level and 1 down, so no more than 1 level of child items ?>
-                <?php if ($this->countModules('menu')): ?>
-                <div class="collapse navbar-collapse" id="mainmenu"><jdoc:include type="modules" name="menu" style="none" /></div>
-                <?php endif; ?>
-            </div>
-        </nav>
+        <div class="menu container-fluid px-0">
+            <?php // Load Menu Module if Module Exists ?>
+            <?php if ($this->countModules('menu')): ?>
+                <jdoc:include type="modules" name="menu" style="none" />
+            <?php endif; ?>
+        </div>
         <?php // Load Header Module if Module Exists ?>
         <?php if ($this->countModules('header')) : ?>
-            <div class="headerClasses">
+            <div class="header headerClasses">
                 <jdoc:include type="modules" name="header" style="none" />
             </div>
         <?php endif; ?>
