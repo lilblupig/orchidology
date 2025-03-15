@@ -26,7 +26,6 @@
 		<position>header</position>
 		<position>footer</position>
 		<position>sidebar</position>
-		<position>search</position>
 		<position>breadcrumbs</position>
 		<position>menu</position>
 	</positions>
