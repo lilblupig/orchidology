@@ -16,8 +16,6 @@ use Joomla\CMS\HTML\HTMLHelper; // HTMLHelper class: Contains static methods to 
 use Joomla\CMS\Language\Text; // Text class: Contains static methods to get text from language files
 use Joomla\CMS\Uri\Uri; // Uri class: Contains static methods to manipulate URIs.
 
-/** @var Joomla\CMS\Document\HtmlDocument $this */
-
 $app = Factory::getApplication();
 $wa  = $this->getWebAssetManager();  // Get the Web Asset Manager - used to load our CSS and JS files
 
@@ -78,33 +76,23 @@ $this->setMetaData('viewport', 'width=device-width, initial-scale=1');
     <?php // Loads the site's CSS and JS files from web asset manager ?>
 	<jdoc:include type="styles" />
 	<jdoc:include type="scripts" />
-
-    <?php /** You can put links to CSS/JS just like any regular HTML page here too, and remove the jdoc:include script/style lines above if you want.
-     * Do not delete the metas line though
-     * 
-     * For example, if you want to manually link to a custom stylesheet or script, you can do it like this:
-     * <link rel="stylesheet" href="https://mysite.com/templates/mytemplate/mycss.css" type="text/css" />
-     * <script src="https://mysite.com/templates/mytemplate/myscript.js"></script>
-     * */ 
-    ?>
     
 </head>
 
 <?php // you can change data-bs-theme to dark for dark mode  // ?>
 <body class="site <?php echo $pageclass; ?>" data-bs-theme="light">
+
 	<header>
         <?php // Generate a Bootstrap Navbar for the top of our website and put the site title on it ?>
         <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
             <div class="container">
                 <a href="" class="navbar-brand"><?php echo ($sitename); ?></a>
-                <?php // Update 1.14 - Added support for mobile menu with bootstrap ?>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainmenu" aria-controls="mainmenu" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 </button>
                 <?php // Put menu links in the navbar - main menu must be in the "menu" position!!! Only supports top level and 1 down, so no more than 1 level of child items ?>
                 <?php if ($this->countModules('menu')): ?>
                 <div class="collapse navbar-collapse" id="mainmenu"><jdoc:include type="modules" name="menu" style="none" /></div>
-
                 <?php endif; ?>
             </div>
         </nav>
@@ -119,29 +107,29 @@ $this->setMetaData('viewport', 'width=device-width, initial-scale=1');
     <?php // Generate the main content area of the website ?>
     <div class="siteBody">
         <div class="container">
-        <?php // Load Breadcrumbs Module if Module Exists ?>
+            <?php // Load Breadcrumbs Module if Module Exists ?>
             <?php if ($this->countModules('breadcrumbs')) : ?>
                 <div class="breadcrumbs">
                     <jdoc:include type="modules" name="breadcrumbs" style="none" />
                 </div>
             <?php endif; ?>
-            <div class="row">
-            <?php // Use a BootStrap grid to load main content on left, sidebar on right IF sidebar exists ?>
-                <?php if ($this->countModules('sidebar')) : ?>
-                <div class="col-xs-12 col-lg-8">
 
-                    <main>
-                    <?php // Load important Joomla system messages ?>
-                        <jdoc:include type="message" />
-                        <?php // Load the main component of the webpage ?>
-                        <jdoc:include type="component" />
-                    </main>
-                </div>
-                <?php // Load the sidebar if one exists ?>
-                <div class="col-xs-12 col-lg-4">
-                <?php // This line tells Joomla to load the "sidebar" module position with the "superBasicMod" mod chrome as the default (see html/layouts/chromes folder) ?>
+            <div class="row">
+                <?php // Use a BootStrap grid to load main content on left, sidebar on right IF sidebar exists ?>
+                <?php if ($this->countModules('sidebar')) : ?>
+                    <div class="col-12 col-lg-9">
+                        <main>
+                            <?php // Load important Joomla system messages ?>
+                            <jdoc:include type="message" />
+                            <?php // Load the main component of the webpage ?>
+                            <jdoc:include type="component" />
+                        </main>
+                    </div>
+                    <?php // Load the sidebar if one exists ?>
+                    <div class="col-12 col-lg-3">
+                        <?php // This line tells Joomla to load the "sidebar" module position with the "superBasicMod" mod chrome as the default (see html/layouts/chromes folder) ?>
                         <jdoc:include type="modules" name="sidebar" style="superBasicMod" />
-                </div>
+                    </div>
                 <?php // If there's no sidebar, just load the component with no sidebar ?>
                 <?php else: ?>
                     <?php // Load the main component of the webpage ?>
@@ -156,9 +144,23 @@ $this->setMetaData('viewport', 'width=device-width, initial-scale=1');
     <?php // Load Footer ?>
     <footer class="footer mt-auto py-3 bg-light ">
         <div class="container">
-            <?php if ($this->countModules('footer')) : ?>
-                <jdoc:include type="modules" name="footer" style="none" />
-            <?php endif; ?>
+            <div class="row">
+                <div class="col-12 col-md-4">
+                    <?php if ($this->countModules('footer-left')) : ?>
+                        <jdoc:include type="modules" name="footer-left" style="none" />
+                    <?php endif; ?>
+                </div>
+                <div class="col-12 col-md-4">
+                    <?php if ($this->countModules('footer-mid')) : ?>
+                        <jdoc:include type="modules" name="footer-mid" style="none" />
+                    <?php endif; ?>
+                </div>
+                <div class="col-12 col-md-4">
+                    <?php if ($this->countModules('footer-right')) : ?>
+                        <jdoc:include type="modules" name="footer-right" style="none" />
+                    <?php endif; ?>
+                </div>
+            </div>
         </div>
     </footer>
 
