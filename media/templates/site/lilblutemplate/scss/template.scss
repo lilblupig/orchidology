@@ -69,6 +69,22 @@ div.dj-megamenu-offcanvas {
     right: 0.5rem;
 }
 
+/* Allow logo module to display inline with nav */
+#mod-custom112, div.dj-megamenu-wrapper {
+    display: inline-block;
+}
+
+@media only screen and (max-width: 768px) {
+    /* Prevent logo module from diplaying until lg */
+    #mod-custom112 {
+        display: none;
+    }
+    /* Display nav wrapper as block to eliminate whitespace up to lg */
+    div.dj-megamenu-wrapper {
+        display: block;
+    }
+}
+
 //Basic Responsive Images
 img {
     max-width: 100%;
