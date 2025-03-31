@@ -74,6 +74,14 @@ div.dj-megamenu-offcanvas {
     display: inline-block;
 }
 
+/* Recolour the mobile menu */
+aside.dj-offcanvas-light,
+aside.dj-offcanvas-light ul.dj-mobile-light li.dj-mobileitem a,
+aside.dj-offcanvas-light div.dj-offcanvas-top
+{
+    background-color: $seasalt;
+}
+
 @media only screen and (max-width: 768px) {
     /* Prevent logo module from diplaying until lg */
     #mod-custom112 {
