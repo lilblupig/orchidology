@@ -135,20 +135,20 @@ $this->setMetaData('viewport', 'width=device-width, initial-scale=1');
     </div>
 
     <?php // Load Footer ?>
-    <footer class="footer mt-auto py-3 bg-light ">
+    <footer class="footer mt-auto py-3">
         <div class="container">
             <div class="row">
-                <div class="col-12 col-md-4">
+                <div class="footer-left col-12 col-md-4">
                     <?php if ($this->countModules('footer-left')) : ?>
                         <jdoc:include type="modules" name="footer-left" style="none" />
                     <?php endif; ?>
                 </div>
-                <div class="col-12 col-md-4">
+                <div class="footer-mid col-12 col-md-4">
                     <?php if ($this->countModules('footer-mid')) : ?>
                         <jdoc:include type="modules" name="footer-mid" style="none" />
                     <?php endif; ?>
                 </div>
-                <div class="col-12 col-md-4">
+                <div class="footer-right col-12 col-md-4">
                     <?php if ($this->countModules('footer-right')) : ?>
                         <jdoc:include type="modules" name="footer-right" style="none" />
                     <?php endif; ?>

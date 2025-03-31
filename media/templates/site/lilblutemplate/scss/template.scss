@@ -36,7 +36,7 @@ body {
     font-weight: 200;
 }
 
-a, footer.footer a {
+a {
     color: $light-green;
     text-decoration: overline;
     // Force long urls to wrap, preventing overflow on small devices.
@@ -104,3 +104,33 @@ aside.dj-offcanvas-light div.dj-offcanvas-top
 // div.menu .dj-megamenu-clean li ul.dj-submenu > li:hover > a {
 //     background: $grey;
 // }
+
+
+/*** FOOTER ***/
+
+footer.footer {
+    background-color: $dark-green;
+    color: $seasalt;
+    text-align: center;
+    a {
+        color: $seasalt;
+        text-decoration: overline;
+    }
+    .footer-left {
+        text-align: left;
+    }
+    .footer-mid {
+        text-align: center;
+    }
+    .footer-right {
+        text-align: right;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    footer.footer {
+        .footer-left, .footer-mid, .footer-right {
+            text-align: center;
+        }
+    }
+}
