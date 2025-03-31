@@ -34,7 +34,9 @@ body {
 }
 
 /* Force long urls to wrap, preventing overflow on small devices. */
-a {
+a, footer.footer a {
+    color: $light-green;
+    text-decoration: overline;
     overflow-wrap: break-word;
 }
 
