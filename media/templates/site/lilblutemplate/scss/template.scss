@@ -38,27 +38,27 @@ a {
     overflow-wrap: break-word;
 }
 
-/* Change colours of menu bar */
-div.menu {
-    background-color: $dark-grey;
-    span.name, span.arrow {
-        color: $seasalt;
-    }
-}
+// /* Change colours of menu bar */
+// div.menu {
+//     background-color: $dark-grey;
+//     span.name, span.arrow {
+//         color: $seasalt;
+//     }
+// }
 
-/* Change colours of menu bar on hover */
-div.menu li:hover {
-    background-color: $grey;
-}
+// /* Change colours of menu bar on hover */
+// div.menu li:hover {
+//     background-color: $grey;
+// }
 
-/* Change background colour of menu dropdowns */
-div.menu .dj-megamenu-clean li div.dj-subwrap .dj-subwrap-in {
-    background-color: $dark-grey;
-}
-/* Change background colour of menu dropdowns on hover*/
-div.menu .dj-megamenu-clean li ul.dj-submenu > li:hover > a {
-    background: $grey;
-}
+// /* Change background colour of menu dropdowns */
+// div.menu .dj-megamenu-clean li div.dj-subwrap .dj-subwrap-in {
+//     background-color: $dark-grey;
+// }
+// /* Change background colour of menu dropdowns on hover*/
+// div.menu .dj-megamenu-clean li ul.dj-submenu > li:hover > a {
+//     background: $grey;
+// }
 
 /* Change position of mobile menu toggle */
 div.dj-megamenu-offcanvas {
