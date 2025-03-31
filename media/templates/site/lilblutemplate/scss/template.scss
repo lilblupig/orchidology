@@ -20,7 +20,8 @@
     src: url('../../../../../templates/lilblutemplate/fonts/Lexend-VariableFont_wght.ttf') format('truetype');
 }
 
-/* Variables*/
+
+/*** VARIABLES ***/
 $dark-green: #104911;
 $light-green: #4e822c;
 $grey:#8491A3;
@@ -28,16 +29,58 @@ $seasalt: #F8F9FA;
 $dark-grey:#212529;
 
 
+/*** MAIN ITEMS ***/
+
 body {
     font-family: 'Lexend', sans-serif;
     font-weight: 200;
 }
 
-/* Force long urls to wrap, preventing overflow on small devices. */
 a, footer.footer a {
     color: $light-green;
     text-decoration: overline;
+    // Force long urls to wrap, preventing overflow on small devices.
     overflow-wrap: break-word;
+}
+
+// Basic Responsive Images
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/*** MENUS ***/
+
+// Allow logo module to display inline with nav
+#mod-custom112, div.dj-megamenu-wrapper {
+    display: inline-block;
+}
+
+// Change position of mobile menu toggle
+div.dj-megamenu-offcanvas {
+    position: fixed;
+    top: 0.5rem;
+    right: 0.5rem;
+}
+
+// Recolour the mobile menu
+aside.dj-offcanvas-light,
+aside.dj-offcanvas-light ul.dj-mobile-light li.dj-mobileitem a,
+aside.dj-offcanvas-light div.dj-offcanvas-top
+{
+    background-color: $seasalt;
+}
+
+@media only screen and (max-width: 768px) {
+    // Prevent logo module from diplaying until lg
+    #mod-custom112 {
+        display: none;
+    }
+    // Display nav wrapper as block to eliminate whitespace up to lg
+    div.dj-megamenu-wrapper {
+        display: block;
+    }
 }
 
 // /* Change colours of menu bar */
@@ -61,40 +104,3 @@ a, footer.footer a {
 // div.menu .dj-megamenu-clean li ul.dj-submenu > li:hover > a {
 //     background: $grey;
 // }
-
-/* Change position of mobile menu toggle */
-div.dj-megamenu-offcanvas {
-    position: fixed;
-    top: 0.5rem;
-    right: 0.5rem;
-}
-
-/* Allow logo module to display inline with nav */
-#mod-custom112, div.dj-megamenu-wrapper {
-    display: inline-block;
-}
-
-/* Recolour the mobile menu */
-aside.dj-offcanvas-light,
-aside.dj-offcanvas-light ul.dj-mobile-light li.dj-mobileitem a,
-aside.dj-offcanvas-light div.dj-offcanvas-top
-{
-    background-color: $seasalt;
-}
-
-@media only screen and (max-width: 768px) {
-    /* Prevent logo module from diplaying until lg */
-    #mod-custom112 {
-        display: none;
-    }
-    /* Display nav wrapper as block to eliminate whitespace up to lg */
-    div.dj-megamenu-wrapper {
-        display: block;
-    }
-}
-
-//Basic Responsive Images
-img {
-    max-width: 100%;
-    height: auto;
-}
