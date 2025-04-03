@@ -35,6 +35,7 @@ media/templates/site/*
 
 # Joomla core files
 /configuration.php
+/configuration.bak.php
 /htaccess.txt
 /index.php
 /LICENSE.txt
