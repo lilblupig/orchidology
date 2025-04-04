@@ -157,7 +157,35 @@ footer.footer {
 }
 
 
+/*** BLOG ***/
+
+div.com-content-category-blog.blog {
+    div.blog-item {
+        border: solid 1px $grey;
+        border-radius: 1rem;
+        padding: 1rem;
+        position: relative;
+        img {
+            display: block;
+            margin: 0 auto;
+        }
+        h2 {
+            font-size: 1.325rem;
+        }
+        dl {
+            text-align: right;
+            font-size: 0.8rem;
+        }
+        p.readmore a {
+            display: block;
+            background-color: $grey;
+        }
+    }
+}
+
+
 /*** CONTACT FORM ***/
+
 div.com-contact.contact {
     padding-bottom: 3rem;
     h2 {
