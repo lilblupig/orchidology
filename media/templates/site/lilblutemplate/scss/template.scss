@@ -142,12 +142,19 @@ footer.footer {
     background-color: $dark-green;
     color: $seasalt;
     text-align: center;
+    padding-top: 1rem;
     a {
         color: $seasalt;
         text-decoration: overline;
     }
     .footer-left {
         text-align: left;
+        ul {
+            display: inline;
+            li {
+                padding-bottom: 0.5rem;
+            }
+        }
     }
     .footer-mid {
         text-align: center;
