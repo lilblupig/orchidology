@@ -14,10 +14,215 @@
 
 
 //Your CSS Here
+@font-face {
+    font-family: 'Lexend';
+    font-weight: 100 900;
+    src: url('../../../../../templates/lilblutemplate/fonts/Lexend-VariableFont_wght.ttf') format('truetype');
+}
 
 
-//Basic Responsive Images
-img{
+/*** VARIABLES ***/
+$dark-green: #104911;
+$light-green: #4e822c;
+$grey:#8491A3;
+$seasalt: #F8F9FA;
+$dark-grey:#212529;
+
+
+/*** MAIN ITEMS ***/
+
+body {
+    font-family: 'Lexend', sans-serif;
+    font-weight: 200;
+    color: $dark-grey;
+}
+
+a {
+    color: $light-green;
+    text-decoration: overline;
+    // Force long urls to wrap, preventing overflow on small devices.
+    overflow-wrap: break-word;
+}
+
+img {
     max-width: 100%;
     height: auto;
+}
+
+button.btn.btn-primary {
+    background-color: $dark-green;
+    border-color: $light-green;
+}
+
+button.btn.btn-primary:hover {
+    background-color: $light-green;
+    border-color: $dark-green;
+}
+
+button.btn.btn-primary:focus, button.btn:active.btn-primary {
+    color: $dark-green;
+    background-color: $seasalt;
+    border-color: $dark-green;
+}
+
+form input.form-control:focus, textarea.form-control:focus, button.btn.btn-primary:focus-visible {
+    box-shadow: 0 0 0 .25rem rgba(78 130 44 / 25%);
+    border-color: $light-green;
+}
+
+
+/*** MENUS ***/
+
+// Allow logo module to display inline with nav
+#mod-custom112, div.dj-megamenu-wrapper {
+    display: inline-block;
+}
+
+// Change position of mobile menu toggle
+div.dj-megamenu-offcanvas {
+    position: fixed;
+    top: 0.5rem;
+    right: 0.5rem;
+}
+
+// Recolour the mobile menu
+aside.dj-offcanvas-light,
+aside.dj-offcanvas-light ul.dj-mobile-light li.dj-mobileitem a,
+aside.dj-offcanvas-light div.dj-offcanvas-top
+{
+    background-color: $seasalt;
+}
+
+@media only screen and (max-width: 768px) {
+    // Prevent logo module from diplaying until lg
+    #mod-custom112 {
+        display: none;
+    }
+    // Display nav wrapper as block to eliminate whitespace up to lg
+    div.dj-megamenu-wrapper {
+        display: block;
+    }
+}
+
+// /* Change colours of menu bar */
+// div.menu {
+//     background-color: $dark-grey;
+//     span.name, span.arrow {
+//         color: $seasalt;
+//     }
+// }
+
+// /* Change colours of menu bar on hover */
+// div.menu li:hover {
+//     background-color: $grey;
+// }
+
+// /* Change background colour of menu dropdowns */
+// div.menu .dj-megamenu-clean li div.dj-subwrap .dj-subwrap-in {
+//     background-color: $dark-grey;
+// }
+// /* Change background colour of menu dropdowns on hover*/
+// div.menu .dj-megamenu-clean li ul.dj-submenu > li:hover > a {
+//     background: $grey;
+// }
+
+
+/*** MAIN CONTENT ***/
+div.com-content-article.item-page {
+    dl {
+        text-align: right;
+        font-size: 0.8rem;
+    }
+}
+
+
+/*** FOOTER ***/
+
+footer.footer {
+    background-color: $dark-green;
+    color: $seasalt;
+    text-align: center;
+    padding-top: 1rem;
+    a {
+        color: $seasalt;
+        text-decoration: overline;
+    }
+    .footer-left {
+        text-align: left;
+        ul {
+            display: inline;
+            li {
+                padding-bottom: 0.5rem;
+            }
+        }
+    }
+    .footer-mid {
+        text-align: center;
+    }
+    .footer-right {
+        text-align: right;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    footer.footer {
+        .footer-left, .footer-mid, .footer-right {
+            text-align: center;
+        }
+    }
+}
+
+
+/*** BLOG ***/
+
+div.com-content-category-blog.blog {
+    div.blog-item {
+        border: solid 1px $grey;
+        border-radius: 1rem;
+        padding: 1rem;
+        position: relative;
+        img {
+            display: block;
+            margin: 0 auto;
+        }
+        h2 {
+            font-size: 1.325rem;
+        }
+        dl {
+            text-align: right;
+            font-size: 0.8rem;
+        }
+        p.readmore a {
+            display: block;
+            background-color: $grey;
+        }
+    }
+}
+
+
+/*** CONTACT FORM ***/
+
+div.com-contact.contact {
+    padding-bottom: 3rem;
+    h2 {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+    div {
+        legend, div.control-group {
+            padding-bottom: 1rem;
+        }
+    }
+    div.control-group.field-spacer {
+        div.control-label {
+            text-align: right;
+        }
+    }
+}
+
+@media only screen and (min-width: 769px) {
+    div.contact-form {
+        max-width: 60%;
+        margin: 0 auto;
+    }
 }

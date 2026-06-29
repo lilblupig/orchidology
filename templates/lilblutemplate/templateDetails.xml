@@ -14,6 +14,7 @@
 		<filename>joomla.asset.json</filename>
 		<filename>templateDetails.xml</filename>
 		<folder>html</folder>
+		<folder>fonts</folder>
 	</files>
 	<media destination="templates/site/lilblutemplate" folder="media">
 		<folder>js</folder>
@@ -22,13 +23,14 @@
 		<folder>images</folder>
 	</media>
 	<positions>
-		<position>header</position>
-		<position>footer</position>
-		<position>sidebar</position>
-		<position>search</position>
-		<position>breadcrumbs</position>
 		<position>menu</position>
-		<position>content-top</position>
+		<position>header</position>
+		<position>breadcrumbs</position>
+		<position>sidebar</position>
+		<position>footer-left</position>
+		<position>footer-mid</position>
+		<position>footer-right</position>
+
 	</positions>
 	<languages folder="language">
 		<language tag="en-GB">en-GB/tpl_lilblutemplate.ini</language>

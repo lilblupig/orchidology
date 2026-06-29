@@ -25,6 +25,7 @@ media/templates/*
 !media/templates/site/
 media/templates/site/*
 !media/templates/site/lilblutemplate/
+media/templates/site/lilblutemplate/css/template.min.css*
 
 /modules/
 /plugins/
@@ -35,6 +36,7 @@ media/templates/site/*
 
 # Joomla core files
 /configuration.php
+/configuration.bak.php
 /htaccess.txt
 /index.php
 /LICENSE.txt
